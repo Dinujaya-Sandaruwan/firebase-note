@@ -45,3 +45,41 @@ body{
 .displayNone{
     display: none;
 }
+
+
+/* Nav Bar */
+
+/* ----------------------------------------------------------------------------------- */
+
+.main-nav{
+    width: 100vw;
+    height: 50px;
+    background-color: rgb(126, 39, 207);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0px 20px 0px 20px;
+    
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading *{
+    color: #fff;
+}
+
+
+
+.nav-links *{
+    padding: 0px 5px 0px 5px;
+    color: #cacaca ;
+}
+
+.gap{
+    height: 20px;
+}
+
+/* ----------------------------------------------------------------------------------- */

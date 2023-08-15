@@ -1,12 +1,19 @@
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import Auth from "./pages/Auth";
 
 const Router = () => {
   return (
     <>
-      <nav>
-        <h2>This is the nav</h2>
+      <nav className="main-nav">
+        <span className="heading">
+          <Link to="/">Firebase Notes</Link>
+        </span>
+        <span className="nav-links">
+          <Link to="/">Home</Link>
+          <Link to="/auth">Auth</Link>
+        </span>
       </nav>
+      <div className="gap"></div>
 
       <Routes>
         <Route path="/auth" element={<Auth />} />

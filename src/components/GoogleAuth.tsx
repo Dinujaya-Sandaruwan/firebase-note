@@ -3,7 +3,11 @@ import { signInWithPopup } from "firebase/auth";
 import { auth } from "../config/firebase";
 import { googleProvider } from "../config/firebase";
 
-const GoogleAuth = () => {
+interface Props {
+  classProp: string;
+}
+
+const GoogleAuth = ({ classProp }: Props) => {
   const signInWithGoogle = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
@@ -12,7 +16,7 @@ const GoogleAuth = () => {
     }
   };
   return (
-    <button className="flex" onClick={signInWithGoogle}>
+    <button className={"flex " + classProp} onClick={signInWithGoogle}>
       <FcGoogle
         size={25}
         style={{

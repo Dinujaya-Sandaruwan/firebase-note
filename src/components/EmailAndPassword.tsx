@@ -2,7 +2,11 @@ import { useState } from "react";
 import { auth } from "../config/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
-const EmailAndPassword = () => {
+interface Props {
+  classProp: string;
+}
+
+const EmailAndPassword = ({ classProp }: Props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const signIn = async () => {
@@ -13,7 +17,7 @@ const EmailAndPassword = () => {
     }
   };
   return (
-    <div>
+    <div className={classProp}>
       <input
         type="text"
         placeholder="Email..."

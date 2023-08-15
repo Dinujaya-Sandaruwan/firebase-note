@@ -1,0 +1,43 @@
+body{
+    margin: 50px;
+}
+
+.icon {
+    margin-bottom: 25px;
+    color: burlywood;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+
+.icon:hover {
+    color: #271600;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    background-color: rgb(212, 212, 212);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    margin: auto;
+    width: 70%;
+    min-width: 350px;
+}
+
+.userDetails{
+    font-size: 15px;
+    display: block;
+}
+
+.avater{
+    border-radius: 50%;
+}
+
+.red{
+    color: rgb(255, 70, 70);
+}

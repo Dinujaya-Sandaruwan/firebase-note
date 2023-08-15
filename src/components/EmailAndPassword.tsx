@@ -2,7 +2,7 @@ import { useState } from "react";
 import { auth } from "../config/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
-const Auth = () => {
+const EmailAndPassword = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const signIn = async () => {
@@ -12,8 +12,6 @@ const Auth = () => {
       console.error(error);
     }
   };
-
-  console.log(auth.currentUser?.email);
   return (
     <div>
       <input
@@ -31,4 +29,4 @@ const Auth = () => {
   );
 };
 
-export default Auth;
+export default EmailAndPassword;

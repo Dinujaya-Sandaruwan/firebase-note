@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { db } from "../config/firebase";
-import { getDocs, collection } from "firebase/firestore";
+import { getDocs, collection, doc, deleteDoc } from "firebase/firestore";
 
 interface Movie {
   id: string;
@@ -12,6 +12,11 @@ interface Movie {
 const MovieList = () => {
   const [movies, setMovies] = useState<Movie[]>([{}] as Movie[]);
   const movieCollectionRef = collection(db, "movies");
+
+  const deleteMovie = async (id: string) => {
+    const movieDoc = doc(db, "movies", id);
+    deleteDoc(movieDoc);
+  };
 
   useEffect(() => {
     const getMovies = async () => {
@@ -30,13 +35,16 @@ const MovieList = () => {
     };
 
     getMovies();
-  }, []);
+  }, [deleteMovie]);
 
   return (
     <>
       <h1>MovieList</h1>
       {movies.map((movie, index) => (
-        <p key={index}>{movie.id}</p>
+        <div key={index} className="movie-item">
+          <button onClick={() => deleteMovie(movie.id)}>Delete</button>
+          <p>{movie.title}</p>
+        </div>
       ))}
     </>
   );

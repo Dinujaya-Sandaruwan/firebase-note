@@ -1,7 +1,8 @@
 import { Link, Route, Routes } from "react-router-dom";
 import Auth from "./pages/Auth";
-import MovieList from "./components/MovieList";
 import Home from "./pages/Home";
+import MovieList from "./components/MovieList";
+import AddMovies from "./components/AddMovies";
 
 const Router = () => {
   return (
@@ -21,7 +22,15 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/auth" element={<Auth />} />
-        <Route path="/movies" element={<MovieList />} />
+        <Route
+          path="/movies"
+          element={
+            <>
+              <AddMovies />
+              <MovieList />
+            </>
+          }
+        />
       </Routes>
     </>
   );

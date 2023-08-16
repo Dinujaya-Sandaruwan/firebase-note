@@ -83,3 +83,10 @@ body{
 }
 
 /* ----------------------------------------------------------------------------------- */
+
+.movie-item p{
+    display: inline;
+}
+.movie-item button{
+    margin-right: 10px;
+}

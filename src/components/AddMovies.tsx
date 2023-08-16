@@ -1,6 +1,6 @@
 import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react";
-import { db } from "../config/firebase";
+import { auth, db } from "../config/firebase";
 
 const AddMovies = () => {
   const [title, setTitle] = useState("");
@@ -20,6 +20,7 @@ const AddMovies = () => {
         releseDate: year,
         recivedAnOscar: oscer,
         title: title,
+        userId: auth?.currentUser?.uid,
       });
     } catch (error) {
       console.log(error);

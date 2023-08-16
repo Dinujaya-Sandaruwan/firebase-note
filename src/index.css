@@ -84,6 +84,13 @@ body{
 
 /* ----------------------------------------------------------------------------------- */
 
+.movie-item{
+    border: 5px solid purple;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
 .movie-item p{
     display: inline;
 }

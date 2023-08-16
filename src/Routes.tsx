@@ -3,6 +3,7 @@ import Auth from "./pages/Auth";
 import Home from "./pages/Home";
 import MovieList from "./components/MovieList";
 import AddMovies from "./components/AddMovies";
+import Upload from "./pages/Upload";
 
 const Router = () => {
   return (
@@ -15,6 +16,7 @@ const Router = () => {
           <Link to="/">Home</Link>
           <Link to="/auth">Auth</Link>
           <Link to="/movies">Movies</Link>
+          <Link to="/upload">Upload</Link>
         </span>
       </nav>
       <div className="gap"></div>
@@ -22,6 +24,7 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/auth" element={<Auth />} />
+        <Route path="/upload" element={<Upload />} />
         <Route
           path="/movies"
           element={
